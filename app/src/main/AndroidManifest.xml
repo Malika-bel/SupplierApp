@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.apptestfirebase">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjetAndroidAppGestionFournisseurs">
+        <activity android:name=".ModifierCommande" android:parentActivityName=".CommandeInstance"></activity>
+        <activity
+            android:name=".CommandeInstance"
+            android:parentActivityName=".HomeAppNavigationDrawer" />
+        <activity android:name=".SupprimerCommande" android:parentActivityName=".CommandeInstance"/>
+        <activity android:name=".ConfirmationAjoutCommande" android:parentActivityName=".AjouterCommande"/>
+        <activity
+            android:name=".AjouterCommande"
+            android:label="Ajouter Commande"
+            android:parentActivityName=".HomeAppNavigationDrawer" />
+        <activity
+            android:name=".HomeAppNavigationDrawer"
+            android:label="@string/title_activity_home_app_navigation_drawer"
+            android:theme="@style/Theme.ProjetAndroidAppGestionFournisseurs.NoActionBar" />
+        <activity
+            android:name=".Inscription"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SeConnecter"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

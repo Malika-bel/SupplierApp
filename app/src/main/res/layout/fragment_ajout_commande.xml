@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:gravity="center_horizontal"
+    tools:context=".ui.ajout_commande.AjoutCommandeFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        />
+    <EditText
+        android:id="@+id/Commande"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Commande"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/TypeProduit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/TypeProduit"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/DateLivraison"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/DateLivraison"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/Client"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Client"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/Consigne"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Consigne"
+        android:backgroundTint="@color/darkGreen"
+        />
+
+    <Button
+        android:id="@+id/AjouterCommande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:backgroundTint="@color/darkGreen"
+        android:layout_marginTop="10dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

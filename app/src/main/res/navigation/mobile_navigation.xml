@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.projetandroidappgestionfournisseurs.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_ajout_commande"
+        android:name="com.example.projetandroidappgestionfournisseurs.ui.ajout_commande.AjoutCommandeFragment"
+        android:label="@string/menu_add"
+        tools:layout="@layout/fragment_ajout_commande" />
+
+    <fragment
+        android:id="@+id/nav_paramtres_compte"
+        android:name="com.example.projetandroidappgestionfournisseurs.ui.paramtres_compte.ParamtresCompteFragment"
+        android:label="@string/menu_parametre_compte"
+        tools:layout="@layout/fragment_paramtres_compte" />
+
+    <fragment
+        android:id="@+id/nav_aide_commentaires"
+        android:name="com.example.projetandroidappgestionfournisseurs.ui.aide_commentaire.AideCommentairesFragment"
+        android:label="@string/menu_aide_commentaires"
+        tools:layout="@layout/fragment_aide_commentaires"/>
+</navigation>

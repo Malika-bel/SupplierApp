@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:gravity="center_horizontal"
+    tools:context=".Inscription">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        />
+    <EditText
+        android:id="@+id/NomFournisseur"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/NomFournisseur"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/PrenomFournisseur"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/PrenomFournisseur"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/adresse_mail"
+        android:inputType="textEmailAddress"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/MotDePasse"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/mot_de_passe"
+        android:backgroundTint="@color/darkGreen"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:id="@+id/inscrire"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="S'inscrire"
+        android:backgroundTint="@color/darkGreen"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/ConnectezVous"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Déja inscrit ? Connectez-vous"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <TextView
+        android:layout_marginTop="165dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supplier App V.1.0.0"
+        android:backgroundTint="@color/darkGreen"
+        />
+
+</LinearLayout>

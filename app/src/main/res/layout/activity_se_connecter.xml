@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:gravity="center_horizontal"
+    tools:context=".SeConnecter">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        />
+    <EditText
+        android:id="@+id/AdresseEmail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/adresse_mail"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <EditText
+        android:id="@+id/MotDePasse"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/mot_de_passe"
+        android:backgroundTint="@color/darkGreen"
+        />
+
+    <Button
+        android:id="@+id/SeConnecter"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Se connecter"
+        android:backgroundTint="@color/darkGreen"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/InscrivezVous"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pas encore inscrit ? Inscrivez-vous"
+        android:backgroundTint="@color/darkGreen"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe oublié?"
+        android:backgroundTint="@color/darkGreen"
+        />
+
+    <TextView
+        android:layout_marginTop="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supplier App V.1.0.0"
+        android:backgroundTint="@color/darkGreen"
+        />
+
+
+</LinearLayout>
