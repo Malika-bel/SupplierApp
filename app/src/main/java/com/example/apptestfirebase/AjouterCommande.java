@@ -19,6 +19,7 @@ public class AjouterCommande extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AjouterCommande.this, ConfirmationAjoutCommande.class);
                 startActivity(intent);
+                //ss
             }
         });
     }
