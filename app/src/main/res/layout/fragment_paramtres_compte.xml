@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/lightGray"
         android:backgroundTint="@color/darkGreen"
+        android:inputType="textEmailAddress"
         />
     <EditText
         android:id="@+id/MotDePasseModification"
@@ -41,13 +42,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/mot_de_passe"
         android:backgroundTint="@color/darkGreen"
-        />
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Entrez votre mot de passe pour confirmer"
-        android:backgroundTint="@color/darkGreen"
+        android:inputType="textPassword"
         />
     <Button
         android:id="@+id/ModifierProfil"
@@ -56,7 +51,6 @@
         android:text="Mettre à jour"
         android:backgroundTint="@color/darkGreen"
         android:layout_marginTop="20dp"
-
         />
 
 

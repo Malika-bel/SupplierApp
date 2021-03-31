@@ -42,6 +42,7 @@ public class ParamtresCompteFragment extends Fragment {
     Button MettreAjour;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    FirebaseUser firebaseUser;
     String userId;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -56,6 +57,7 @@ public class ParamtresCompteFragment extends Fragment {
         fpassword = root.findViewById(R.id.MotDePasseModification);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+        firebaseUser= fAuth.getCurrentUser();
         userId = fAuth.getCurrentUser().getUid();
 
         DocumentReference documentReference = fStore.collection("fournisseurs").document(userId);
@@ -97,25 +99,18 @@ public class ParamtresCompteFragment extends Fragment {
                MettreAjour.setOnClickListener(new View.OnClickListener() {
                    @Override
                    public void onClick(View v) {
-                       FirebaseUser firebaseUser = fAuth.getCurrentUser();
-                       UserProfileChangeRequest request=null;
-                       firebaseUser.updateProfile(request);
-                       fAuth.updateCurrentUser(firebaseUser).addOnSuccessListener(new OnSuccessListener<Void>() {
+                       firebaseUser.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
                            @Override
                            public void onSuccess(Void aVoid) {
-                               Toast.makeText(getActivity(),"Votre profil a été .",Toast.LENGTH_SHORT).show();
+                               Toast.makeText(getActivity(), "Votre email a été modifié.", Toast.LENGTH_SHORT).show();
                            }
-                       });
-                   }
-               });
-
-
-
-
-            }
+                       }
+                   });
         });
 
 
         return root;
     }
+
+
 }
