@@ -15,35 +15,41 @@
         android:src="@drawable/profil2" />
     <EditText
         android:layout_marginTop="60dp"
-        android:id="@+id/NomFournisseurModification"
+        android:id="@+id/NomFournisseur"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/lightGray"
+        android:hint="@string/NomFournisseur"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/PrenomFournisseurModification"
+        android:id="@+id/PrenomFournisseur"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/lightGray"
+        android:hint="@string/PrenomFournisseur"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/AdresseEmailModification"
+        android:id="@+id/AdresseEmail"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/lightGray"
+        android:hint="@string/adresse_mail"
         android:backgroundTint="@color/darkGreen"
-        android:inputType="textEmailAddress"
         />
     <EditText
-        android:id="@+id/MotDePasseModification"
+        android:id="@+id/MotDePasse"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/mot_de_passe"
         android:backgroundTint="@color/darkGreen"
-        android:inputType="textPassword"
         />
+    <EditText
+        android:id="@+id/MotDePasseConfirme"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/MotDePasseConfirme"
+        android:backgroundTint="@color/darkGreen"
+        />
+
     <Button
         android:id="@+id/ModifierProfil"
         android:layout_width="170dp"
@@ -51,6 +57,7 @@
         android:text="Mettre à jour"
         android:backgroundTint="@color/darkGreen"
         android:layout_marginTop="20dp"
+
         />
 
 
