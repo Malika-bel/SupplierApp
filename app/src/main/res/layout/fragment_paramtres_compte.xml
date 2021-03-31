@@ -15,38 +15,31 @@
         android:src="@drawable/profil2" />
     <EditText
         android:layout_marginTop="60dp"
-        android:id="@+id/NomFournisseur"
+        android:id="@+id/NomFournisseurModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/NomFournisseur"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/PrenomFournisseur"
+        android:id="@+id/PrenomFournisseurModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/PrenomFournisseur"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/AdresseEmail"
+        android:id="@+id/AdresseEmailModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/adresse_mail"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/MotDePasse"
+        android:id="@+id/MotDePasseModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/mot_de_passe"
-        android:backgroundTint="@color/darkGreen"
-        />
-    <EditText
-        android:id="@+id/MotDePasseConfirme"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/MotDePasseConfirme"
         android:backgroundTint="@color/darkGreen"
         />
 
