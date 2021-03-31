@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
              /*   //la creation d'un nouveau étudiant
                 String key = ref_fournisseur.push().getKey();
-                Fournisseur e = new Fournisseur(1,"MALIKA","belmokhtar");
+                Fournisseur e = new Fournisseur(2,"GASMI","Adlane");
                 //l'ajouter dans la table des étudiants
                 ref_fournisseur.push().setValue(e);*/
 
