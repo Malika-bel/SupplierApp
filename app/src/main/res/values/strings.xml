@@ -22,7 +22,7 @@
     <string name="Commande">Commande</string>
     <string name="TypeProduit">Type de produit</string>
     <string name="DateLivraison">Date de livraison</string>
-    <string name="Client">Client</string>
+    <string name="Client">Adresse de livraison</string>
     <string name="Consigne">Consignes</string>
 
     <string name="Rechercher">Rechercher</string>

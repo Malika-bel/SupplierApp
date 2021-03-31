@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="10dp"
+    android:paddingTop="50dp"
     android:gravity="center_horizontal"
     tools:context=".AjouterCommande">
     <ImageView
@@ -51,6 +51,14 @@
 
     <Button
         android:id="@+id/AjouterCommande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:backgroundTint="@color/darkGreen"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/backHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ajouter"

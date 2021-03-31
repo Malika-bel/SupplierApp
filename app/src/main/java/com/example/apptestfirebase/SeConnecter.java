@@ -65,7 +65,7 @@ public class SeConnecter extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(SeConnecter.this, "Bienvenue, connexion réussi", Toast.LENGTH_SHORT).show();
+                           /* Toast.makeText(SeConnecter.this, "Bienvenue, connexion réussi", Toast.LENGTH_SHORT).show();*/
                             startActivity(new Intent(getApplicationContext(), HomeAppNavigationDrawer.class));
                         }else {
                             Toast.makeText(SeConnecter.this, "Une erreur a été détectée ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

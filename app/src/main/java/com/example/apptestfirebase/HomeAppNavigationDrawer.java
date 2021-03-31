@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -19,6 +20,13 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.annotations.Nullable;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 public class HomeAppNavigationDrawer extends AppCompatActivity {
@@ -26,6 +34,12 @@ public class HomeAppNavigationDrawer extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     String [] list;
     MaterialSearchView searchView;
+    TextView profilname;
+    FirebaseAuth firebaseAuth;
+    FirebaseFirestore fStore;
+    FirebaseUser firebaseUser;
+    String userId;
+
 /*  mNavigationView.getMenu().findItem(R.id.nav_logout).setOnMenuItemClickListener(menuItem -> {
         AppUtils.showLongToast("this works", getApplicationContext());
         return true;
@@ -40,7 +54,10 @@ public class HomeAppNavigationDrawer extends AppCompatActivity {
 
 
 
+
         list = new String[]{"Commande1","Commande2","Commande3","Commande4","Commande5","Commande6"};
+
+
         //pour le button de recherche
         searchView = findViewById(R.id.search_view);
         searchView.closeSearch();
@@ -72,18 +89,35 @@ public class HomeAppNavigationDrawer extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_ajout_commande, R.id.nav_paramtres_compte,R.id.nav_aide_commentaires)
+                R.id.nav_home, R.id.nav_paramtres_compte,R.id.nav_aide_commentaires)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+       /* View hView =  navigationView.inflateHeaderView(R.layout.nav_header_main);*/
+        profilname = navigationView.getHeaderView(0).findViewById(R.id.ProfilName);
+        firebaseAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+        firebaseUser= firebaseAuth.getCurrentUser();
+        userId = firebaseAuth.getCurrentUser().getUid();
+        /*DocumentReference documentReference = fStore.collection("fournisseurs").document(userId);
+        documentReference.addSnapshotListener(HomeAppNavigationDrawer.this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                profilname.setText(documentSnapshot.getString("fName"),TextView.BufferType.EDITABLE);
+
+            }
+        });*/
         navigationView.getMenu().findItem(R.id.nav_logout).setOnMenuItemClickListener(menuItem -> {
             FirebaseAuth.getInstance().signOut();//logout
             startActivity(new Intent(getApplicationContext(),SeConnecter.class));
             finish();
             return true;
         });
+        //Affichage des informations
+
     }
 
     @Override

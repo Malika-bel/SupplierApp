@@ -33,7 +33,7 @@ Button Oui, Non ;
                 ref_commande_suppr.removeValue() ;
 
                 Toast.makeText(SupprimerCommande.this, "Votre commande a été supprimée", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),HomeAppNavigationDrawer.class));
 
             }
         });

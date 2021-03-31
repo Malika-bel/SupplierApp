@@ -35,8 +35,6 @@ public class ModifierCommande extends AppCompatActivity {
         ModifierCommandeFinal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ModifierCommande.this, ConfirmationAjoutCommande.class);
-                startActivity(intent);
 
                  String commande = Commande.getText().toString().trim();
                  String typeProduit = TypeProduit.getText().toString().trim();
@@ -51,7 +49,7 @@ public class ModifierCommande extends AppCompatActivity {
                 ref_commande_update.child("Consigne").setValue(consigne) ;
 
                 Toast.makeText(ModifierCommande.this, "Votre commande a été mise à jours", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),HomeAppNavigationDrawer.class));
 
             }
         });
