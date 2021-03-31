@@ -40,14 +40,15 @@ public class AjouterCommande extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AjouterCommande.this, ConfirmationAjoutCommande.class);
                 startActivity(intent);
-
+                String key =  ref_commande.push().getKey() ;
                 commande.setCommande( Commande.getText().toString().trim());
                 commande.setCommande( TypeProduit.getText().toString().trim());
                 commande.setCommande( DateLivraison .getText().toString().trim());
                 commande.setCommande(Client.getText().toString().trim());
                 commande.setCommande( Consigne .getText().toString().trim());
+                commande.setKey(key) ;
 
-                ref_commande.push().setValue(commande);
+                ref_commande.child(key).setValue(commande);
 
                 Toast.makeText(AjouterCommande.this, "Votre commande a été enregistrée", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
