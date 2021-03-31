@@ -15,41 +15,40 @@
         android:src="@drawable/profil2" />
     <EditText
         android:layout_marginTop="60dp"
-        android:id="@+id/NomFournisseur"
+        android:id="@+id/NomFournisseurModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="@string/NomFournisseur"
+        android:textColor="@color/lightGray"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/PrenomFournisseur"
+        android:id="@+id/PrenomFournisseurModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="@string/PrenomFournisseur"
+        android:textColor="@color/lightGray"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/AdresseEmail"
+        android:id="@+id/AdresseEmailModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="@string/adresse_mail"
+        android:textColor="@color/lightGray"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/MotDePasse"
+        android:id="@+id/MotDePasseModification"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/mot_de_passe"
         android:backgroundTint="@color/darkGreen"
         />
-    <EditText
-        android:id="@+id/MotDePasseConfirme"
-        android:layout_width="250dp"
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/MotDePasseConfirme"
+        android:text="Entrez votre mot de passe pour confirmer"
         android:backgroundTint="@color/darkGreen"
         />
-
     <Button
         android:id="@+id/ModifierProfil"
         android:layout_width="170dp"

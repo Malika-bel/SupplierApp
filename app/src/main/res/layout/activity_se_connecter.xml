@@ -18,14 +18,16 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/adresse_mail"
+        android:inputType="textEmailAddress"
         android:backgroundTint="@color/darkGreen"
         />
     <EditText
-        android:id="@+id/MotDePasse"
+        android:id="@+id/MotDePasseConnexion"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/mot_de_passe"
         android:backgroundTint="@color/darkGreen"
+        android:inputType="textPassword"
         />
 
     <Button
@@ -46,6 +48,7 @@
         android:backgroundTint="@color/darkGreen"
         />
     <TextView
+        android:id="@+id/MotDePasseOublie"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

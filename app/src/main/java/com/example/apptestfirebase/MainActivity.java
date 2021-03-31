@@ -12,16 +12,16 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     Button seConnecter, inscrire;
-    FirebaseDatabase database;
-    DatabaseReference ref_fournisseur;
+   /* FirebaseDatabase database;
+    DatabaseReference ref_fournisseur;*/
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        database= FirebaseDatabase.getInstance();
-        ref_fournisseur = database.getReference().child("fournisseur");
+        /*database= FirebaseDatabase.getInstance();
+        ref_fournisseur = database.getReference().child("fournisseur");*/
         seConnecter = findViewById(R.id.SeConnecterMain);
         inscrire = findViewById(R.id.inscrireMain);
         seConnecter.setOnClickListener(new View.OnClickListener() {
@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                //la creation d'un nouveau étudiant
+             /*   //la creation d'un nouveau étudiant
                 String key = ref_fournisseur.push().getKey();
                 Fournisseur e = new Fournisseur(1,"MALIKA","belmokhtar");
                 //l'ajouter dans la table des étudiants
-                ref_fournisseur.push().setValue(e);
+                ref_fournisseur.push().setValue(e);*/
 
-                /*Intent intent = new Intent(MainActivity.this, SeConnecter.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(MainActivity.this, SeConnecter.class);
+                startActivity(intent);
             }
         });
         inscrire.setOnClickListener(new View.OnClickListener() {
